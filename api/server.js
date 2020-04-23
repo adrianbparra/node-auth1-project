@@ -11,7 +11,7 @@ const accountsRouter = require("../accounts-router/accounts-router.js");
 
 const sessionConfig = {
     name: "accountSession",
-    secret: "Very $ecret $ecret",
+    secret: "Very$3cr3t$3cr3t",
     cookie: {
         maxAge: 1 * 24 * 60  * 60 * 1000,
         secure: false,

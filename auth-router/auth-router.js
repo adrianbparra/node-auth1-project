@@ -58,4 +58,17 @@ server.post("/register", (req,res) =>{
 })
 
 
+server.get("/logout", (req,res)=>{
+
+    req.session.destroy(err=>{
+        if(err){
+            res.send("Unable to logout")
+        } else {
+            res.send("Logged out")
+        }
+    })
+
+})
+
+
 module.exports = server ;
