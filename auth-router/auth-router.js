@@ -14,7 +14,11 @@ server.post("/login", (req,res) =>{
         .then(account =>{
 
             if(account && bcrypt.compareSync(password, account.password)){
+                req.session.user = username;
+
+
                 res.status(200).json({id: account.id, username})
+                
             } else{
                 res.status(401).json({message:"Credentials Incorrect"})
             }

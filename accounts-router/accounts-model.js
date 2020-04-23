@@ -2,7 +2,7 @@ const db = require("../database/db-config.js");
 
 
 function find() {
-    return db("accounts")
+    return db("accounts").select("id","username")
 }
 
 function findBy(username){
@@ -18,5 +18,5 @@ module.exports= {
     find,
     findBy,
     add,
-    
+
 }
